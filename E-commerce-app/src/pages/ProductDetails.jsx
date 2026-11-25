@@ -12,10 +12,10 @@ function ProductDetails() {
   const navigate = useNavigate();
   const { addToCart } = useCart();
 
-function handleAddToCart() {
-  addToCart(product);
-  navigate("/cart");
-}
+  function handleAddToCart() {
+    addToCart(product);
+    navigate("/cart");
+  }
 
 
   useEffect(() => {
@@ -64,14 +64,14 @@ function handleAddToCart() {
           </p>
           <p className="text-gray-600 mt-5">{product.description}</p>
 
-  <button
-             onClick={handleAddToCart}
+          <button
+            onClick={handleAddToCart}
             className="mt-7 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700"
           >
             Add to Cart
-          </button>  
+          </button>
 
-      
+
         </div>
       </div>
     </div>

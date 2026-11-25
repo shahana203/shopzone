@@ -32,41 +32,43 @@ export function CartProvider({ children }) {
   );
 
   function increaseQuantity(productId) {
-  setCart((previousCart) =>
-    previousCart.map((item) =>
-      item.id === productId
-        ? { ...item, quantity: item.quantity + 1 }
-        : item
-    )
-  );
-}
-
-function decreaseQuantity(productId) {
-  setCart((previousCart) =>
-    previousCart
-      .map((item) =>
+    setCart((previousCart) =>
+      previousCart.map((item) =>
         item.id === productId
-          ? { ...item, quantity: item.quantity - 1 }
+          ? { ...item, quantity: item.quantity + 1 }
           : item
       )
-      .filter((item) => item.quantity > 0)
-  );
-}
-function removeFromCart(productId) {
-  setCart((previousCart) =>
-    previousCart.filter((item) => item.id !== productId)
-  );
-}
+    );
+  }
 
-function clearCart() {
-  setCart([]);
-}
+  function decreaseQuantity(productId) {
+    setCart((previousCart) =>
+      previousCart
+        .map((item) =>
+          item.id === productId
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  }
+  function removeFromCart(productId) {
+    setCart((previousCart) =>
+      previousCart.filter((item) => item.id !== productId)
+    );
+  }
+
+  function clearCart() {
+    setCart([]);
+  }
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, cartCount,  increaseQuantity,
-    decreaseQuantity,
-    removeFromCart, 
-     clearCart,}}>
+    <CartContext.Provider value={{
+      cart, addToCart, cartCount, increaseQuantity,
+      decreaseQuantity,
+      removeFromCart,
+      clearCart,
+    }}>
       {children}
     </CartContext.Provider>
   );

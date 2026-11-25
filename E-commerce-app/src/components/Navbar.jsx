@@ -55,28 +55,28 @@ function Navbar({ searchTerm, onSearchChange, cartCount }) {
               Shop
             </a>
 
-         <Link
-  to="/offers"
-  className="hover:text-blue-600 flex items-center gap-1"
->
-  <Tag size={16} />
-  Offers
-</Link>
-<Link
-  to="/new-arrivals"
-  className="hover:text-blue-600 flex items-center gap-1"
->
-  <Sparkles size={16} />
-  New Arrivals
-</Link>
+            <Link
+              to="/offers"
+              className="hover:text-blue-600 flex items-center gap-1"
+            >
+              <Tag size={16} />
+              Offers
+            </Link>
+            <Link
+              to="/new-arrivals"
+              className="hover:text-blue-600 flex items-center gap-1"
+            >
+              <Sparkles size={16} />
+              New Arrivals
+            </Link>
 
             <Link
-  to="/contact"
-  className="hover:text-blue-600 flex items-center gap-1"
->
-  <Phone size={16} />
-  Contact
-</Link>
+              to="/contact"
+              className="hover:text-blue-600 flex items-center gap-1"
+            >
+              <Phone size={16} />
+              Contact
+            </Link>
           </div>
 
           {/* Search */}
@@ -170,27 +170,27 @@ function Navbar({ searchTerm, onSearchChange, cartCount }) {
               Shop
             </a>
 
-          <Link
-  to="/offers"
-  onClick={() => setMobileMenuOpen(false)}
-  className="hover:text-blue-600"
->
-  Offers
-</Link>
+            <Link
+              to="/offers"
+              onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-blue-600"
+            >
+              Offers
+            </Link>
 
-         <Link
-  to="/new-arrivals"
-  onClick={() => setMobileMenuOpen(false)}
->
-  New Arrivals
-</Link>
+            <Link
+              to="/new-arrivals"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              New Arrivals
+            </Link>
 
-           <Link
-  to="/contact"
-  onClick={() => setMobileMenuOpen(false)}
->
-  Contact
-</Link>
+            <Link
+              to="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
 
           </div>
         )}

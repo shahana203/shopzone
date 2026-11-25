@@ -27,11 +27,10 @@ function Sidebar({
         <button
           type="button"
           onClick={() => onCategoryChange("all")}
-          className={`w-full text-left px-3 py-2.5 rounded-lg text-sm transition ${
-            selectedCategory === "all"
+          className={`w-full text-left px-3 py-2.5 rounded-lg text-sm transition ${selectedCategory === "all"
               ? "bg-blue-50 text-blue-600 font-semibold"
               : "text-gray-600 hover:bg-gray-100"
-          }`}
+            }`}
         >
           All Products
         </button>
@@ -42,11 +41,10 @@ function Sidebar({
             type="button"
             key={category}
             onClick={() => onCategoryChange(category)}
-            className={`w-full text-left px-3 py-2.5 rounded-lg text-sm capitalize transition ${
-              selectedCategory === category
+            className={`w-full text-left px-3 py-2.5 rounded-lg text-sm capitalize transition ${selectedCategory === category
                 ? "bg-blue-50 text-blue-600 font-semibold"
                 : "text-gray-600 hover:bg-gray-100"
-            }`}
+              }`}
           >
             {category}
           </button>
@@ -121,8 +119,8 @@ function Sidebar({
 
         {/* Price Values */}
         <div className="flex justify-between text-sm text-gray-700 mt-3">
-          <span>₹{minPrice}</span>
-          <span>₹{maxPrice}</span>
+          <span>${minPrice}</span>
+          <span>${maxPrice}</span>
         </div>
 
       </div>

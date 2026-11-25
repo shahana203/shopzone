@@ -273,11 +273,10 @@ function Checkout() {
                 <div className="space-y-4">
 
                   {/* Cash on Delivery */}
-                  <label className={`flex items-center gap-4 border rounded-xl p-4 cursor-pointer transition ${
-                    paymentMethod === "cod"
+                  <label className={`flex items-center gap-4 border rounded-xl p-4 cursor-pointer transition ${paymentMethod === "cod"
                       ? "border-blue-600 bg-blue-50"
                       : "border-gray-200"
-                  }`}>
+                    }`}>
 
                     <input
                       type="radio"
@@ -303,11 +302,10 @@ function Checkout() {
                   </label>
 
                   {/* Online Payment */}
-                  <label className={`flex items-center gap-4 border rounded-xl p-4 cursor-pointer transition ${
-                    paymentMethod === "online"
+                  <label className={`flex items-center gap-4 border rounded-xl p-4 cursor-pointer transition ${paymentMethod === "online"
                       ? "border-blue-600 bg-blue-50"
                       : "border-gray-200"
-                  }`}>
+                    }`}>
 
                     <input
                       type="radio"
@@ -326,7 +324,7 @@ function Checkout() {
                       </h3>
 
                       <p className="text-sm text-gray-500">
-                       
+
                       </p>
                     </div>
 
@@ -336,7 +334,7 @@ function Checkout() {
 
                 {paymentMethod === "online" && (
                   <div className="mt-4 bg-blue-50 text-blue-700 text-sm p-4 rounded-lg">
-                   
+
                   </div>
                 )}
 
@@ -412,7 +410,7 @@ function Checkout() {
               </button>
 
               <p className="text-xs text-gray-400 text-center mt-4">
-               
+
               </p>
 
             </aside>
